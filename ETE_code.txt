@@ -1,0 +1,40 @@
+# downloading ETE documentation: http://etetoolkit.org/download/
+# build tool documentation: http://etetoolkit.org/documentation/ete-build/
+
+# code works the best with Mac OS X system
+
+# it's recommended to use conda to install ETE:
+
+1. conda create -n ete3 python=3
+2. conda activate ete3
+3. conda install -c etetoolkit ete3 ete_toolchain
+4. ete3 build check
+
+# this activates the conda enviroment to use ete3
+conda activate ete3
+
+# build function builds the tree
+# (-w) gene tree workflow
+# (-a) amino acid FASTA file
+# (-n) nucleotide FASTA file
+# (-o) output file for tree
+5. ete3 build -w standard_fasttree -a NUP62.aa.fa -o output_tree 
+
+
+# ETE can also be downloaded without using conda:
+-- we used this method to download on the class server
+
+#1. in ubuntu, mint and other Debian based distributions
+sudo apt-get install python-numpy python-qt4 python-lxml python-six
+
+#2. Install/Upgrade ETE using PIP
+pip install --upgrade ete3
+
+#or using EasyInstall
+easy_install -U ete3
+
+#or from the sources: Download latest version from PyPU and execute:
+python setup.py install 
+
+#3. Compile external tools - optional step, required only by ete-build and ete-evol
+ete3 upgrade-external-tools
