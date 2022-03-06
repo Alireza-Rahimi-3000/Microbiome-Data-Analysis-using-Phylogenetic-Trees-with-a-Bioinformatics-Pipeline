@@ -6,7 +6,7 @@ Here, we developed an easy-to-use pipeline that conveniently and efficiently rec
    
 # Pipeline Workflow Features            
    
-*Inputs only include species names.        
+*Inputs only include species names.         
 
 *One python script to build newick file.     
 
